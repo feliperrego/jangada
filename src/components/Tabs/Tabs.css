@@ -1,10 +1,15 @@
 .jg-tabs { font-family: var(--jg-font-sans); color: var(--jg-color-text); }
 
+/* A lista rola na horizontal quando as abas não cabem (celular). overflow-x: auto faz o eixo
+   vertical também virar rolável, então nada pode sair da caixa: a linha de base é uma sombra
+   interna, o indicador fica em bottom: 0 e o anel de foco é desenhado para dentro da aba. */
 .jg-tabs__list {
   display: flex;
   gap: var(--jg-space-1);
-  border-bottom: 1px solid var(--jg-color-border);
+  box-shadow: inset 0 -1px 0 var(--jg-color-border);
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
 }
 
 .jg-tabs__trigger {
@@ -21,6 +26,7 @@
 }
 
 .jg-tabs__trigger:hover { color: var(--jg-color-text); }
+.jg-tabs__trigger.jg-focusable:focus-visible { outline-offset: -2px; }
 
 .jg-tabs__trigger[data-state='active'] { color: var(--jg-color-primary); }
 .jg-tabs__trigger[data-state='active']::after {
@@ -28,7 +34,7 @@
   position: absolute;
   left: var(--jg-space-2);
   right: var(--jg-space-2);
-  bottom: -1px;
+  bottom: 0;
   height: 2px;
   border-radius: 2px;
   background: var(--jg-color-primary);
