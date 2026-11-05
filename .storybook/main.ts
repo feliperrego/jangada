@@ -5,6 +5,7 @@ const config: StorybookConfig = {
   addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
   framework: { name: '@storybook/react-vite', options: {} },
   docs: { autodocs: 'tag' },
+  staticDirs: ['./public'],
   core: { disableTelemetry: true },
   // O vite.config.ts é do build da biblioteca; aqui não precisa gerar .d.ts nem empacotar como lib.
   viteFinal: async (cfg) => {
