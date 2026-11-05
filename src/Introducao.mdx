@@ -1,0 +1,34 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
+import { colors, space, radius } from './tokens';
+
+<Meta title="Introdução" />
+
+# Jangada
+
+Design system em React para produtos financeiros: tokens com tema claro e escuro, componentes acessíveis e testes que medem a acessibilidade em vez de supor.
+
+- **Tokens como fonte única.** Cores, tipografia, espaços e raios saem de `tokens/tokens.json` e viram variáveis CSS e constantes TypeScript.
+- **Acessibilidade medida.** Toda story passa pelo axe nos testes, e todo par de cor texto/fundo passa por um teste de contraste WCAG AA nos dois temas.
+- **Comportamento do Radix, estilo e API próprios.** Diálogo, abas, seleção, checkbox e switch usam os primitivos do Radix para foco, teclado e ARIA; o visual e a forma de usar são da Jangada.
+
+Use o botão **Tema** na barra de ferramentas para ver tudo no escuro.
+
+## Cores do tema claro
+
+<ColorPalette>
+  {Object.entries(colors.light).filter(([name]) => !name.startsWith('overlay')).map(([name, value]) => (
+    <ColorItem key={name} title={`--jg-color-${name}`} subtitle={`escuro: ${colors.dark[name]}`} colors={{ claro: value, escuro: colors.dark[name] }} />
+  ))}
+</ColorPalette>
+
+## Tipografia
+
+Instrument Sans, com números tabulares nos valores em reais.
+
+<Typeset fontFamily="Instrument Sans, system-ui, sans-serif" fontSizes={[12, 14, 16, 18, 20, 24, 30]} fontWeight={500} sampleText="Saldo disponível: R$ 3.240,18" />
+
+## Espaços e raios
+
+Base de 4px. Espaços: {Object.entries(space).map(([k, v]) => `${k} = ${v}`).join(' · ')}.
+
+Raios: {Object.entries(radius).map(([k, v]) => `${k} = ${v}`).join(' · ')}.

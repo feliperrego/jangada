@@ -1,0 +1,64 @@
+/* Estilos compartilhados pelos componentes. Nenhum reset global: a Jangada só estiliza o que é dela. */
+
+.jg-root {
+  font-family: var(--jg-font-sans);
+  color: var(--jg-color-text);
+  background: var(--jg-color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.jg-focusable:focus-visible,
+.jg-focus-within:focus-within {
+  outline: 2px solid var(--jg-color-focus-ring);
+  outline-offset: 2px;
+}
+
+.jg-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Campo: rótulo, ajuda e erro, compartilhado por TextField, Select, Checkbox e Switch */
+.jg-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jg-space-1);
+  font-family: var(--jg-font-sans);
+  min-width: 0;
+}
+
+.jg-field__label {
+  font-size: var(--jg-font-size-sm);
+  font-weight: var(--jg-font-weight-medium);
+  color: var(--jg-color-text);
+  line-height: var(--jg-line-height-tight);
+}
+
+.jg-field__required {
+  color: var(--jg-color-danger);
+  margin-left: 2px;
+}
+
+.jg-field__description {
+  font-size: var(--jg-font-size-sm);
+  color: var(--jg-color-text-muted);
+  line-height: var(--jg-line-height-normal);
+  margin: 0;
+}
+
+.jg-field__error {
+  display: flex;
+  gap: var(--jg-space-1);
+  align-items: flex-start;
+  font-size: var(--jg-font-size-sm);
+  color: var(--jg-color-danger);
+  line-height: var(--jg-line-height-normal);
+  margin: 0;
+}

@@ -1,0 +1,119 @@
+/* Gerado por scripts/build-tokens.mjs a partir de tokens/tokens.json. Não edite à mão. */
+:root {
+  color-scheme: light;
+  --jg-color-bg: #FAF8F5;
+  --jg-color-surface: #FFFFFF;
+  --jg-color-surface-sunken: #F2EEE8;
+  --jg-color-border: #E4DED5;
+  --jg-color-border-strong: #82796D;
+  --jg-color-text: #1C1916;
+  --jg-color-text-muted: #5F574D;
+  --jg-color-text-disabled: #A99F92;
+  --jg-color-primary: #0C6C67;
+  --jg-color-primary-hover: #0B5652;
+  --jg-color-primary-subtle: #E8F6F5;
+  --jg-color-on-primary: #FFFFFF;
+  --jg-color-focus-ring: #0C6C67;
+  --jg-color-danger: #B83227;
+  --jg-color-danger-subtle: #FDE4E1;
+  --jg-color-on-danger: #FFFFFF;
+  --jg-color-success: #17683E;
+  --jg-color-success-subtle: #DFF5E5;
+  --jg-color-warning: #8A5606;
+  --jg-color-warning-subtle: #FFF1D6;
+  --jg-color-overlay: rgba(18, 16, 14, 0.48);
+  --jg-font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --jg-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --jg-font-size-xs: 0.75rem;
+  --jg-font-size-sm: 0.875rem;
+  --jg-font-size-md: 1rem;
+  --jg-font-size-lg: 1.125rem;
+  --jg-font-size-xl: 1.25rem;
+  --jg-font-size-2xl: 1.5rem;
+  --jg-font-size-3xl: 1.875rem;
+  --jg-font-weight-regular: 400;
+  --jg-font-weight-medium: 500;
+  --jg-font-weight-semibold: 600;
+  --jg-font-weight-bold: 700;
+  --jg-line-height-tight: 1.2;
+  --jg-line-height-normal: 1.5;
+  --jg-space-0: 0;
+  --jg-space-1: 0.25rem;
+  --jg-space-2: 0.5rem;
+  --jg-space-3: 0.75rem;
+  --jg-space-4: 1rem;
+  --jg-space-5: 1.25rem;
+  --jg-space-6: 1.5rem;
+  --jg-space-8: 2rem;
+  --jg-space-10: 2.5rem;
+  --jg-space-12: 3rem;
+  --jg-radius-sm: 6px;
+  --jg-radius-md: 10px;
+  --jg-radius-lg: 14px;
+  --jg-radius-full: 999px;
+  --jg-shadow-sm: 0 1px 2px rgba(18, 16, 14, 0.08);
+  --jg-shadow-md: 0 4px 12px rgba(18, 16, 14, 0.10);
+  --jg-shadow-lg: 0 16px 40px rgba(18, 16, 14, 0.18);
+  --jg-duration-fast: 120ms;
+  --jg-duration-base: 200ms;
+  --jg-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --jg-control-height-sm: 2rem;
+  --jg-control-height-md: 2.5rem;
+  --jg-control-height-lg: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --jg-color-bg: #12100E;
+    --jg-color-surface: #1C1916;
+    --jg-color-surface-sunken: #0B0A09;
+    --jg-color-border: #2E2924;
+    --jg-color-border-strong: #82796D;
+    --jg-color-text: #FAF8F5;
+    --jg-color-text-muted: #A99F92;
+    --jg-color-text-disabled: #5F574D;
+    --jg-color-primary: #5CBDB6;
+    --jg-color-primary-hover: #95D6D1;
+    --jg-color-primary-subtle: #0B3533;
+    --jg-color-on-primary: #052020;
+    --jg-color-focus-ring: #5CBDB6;
+    --jg-color-danger: #F08A80;
+    --jg-color-danger-subtle: #4A140F;
+    --jg-color-on-danger: #4A140F;
+    --jg-color-success: #5FD08F;
+    --jg-color-success-subtle: #0A2E1B;
+    --jg-color-warning: #F5C04E;
+    --jg-color-warning-subtle: #3D2703;
+    --jg-color-overlay: rgba(0, 0, 0, 0.64);
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --jg-color-bg: #12100E;
+  --jg-color-surface: #1C1916;
+  --jg-color-surface-sunken: #0B0A09;
+  --jg-color-border: #2E2924;
+  --jg-color-border-strong: #82796D;
+  --jg-color-text: #FAF8F5;
+  --jg-color-text-muted: #A99F92;
+  --jg-color-text-disabled: #5F574D;
+  --jg-color-primary: #5CBDB6;
+  --jg-color-primary-hover: #95D6D1;
+  --jg-color-primary-subtle: #0B3533;
+  --jg-color-on-primary: #052020;
+  --jg-color-focus-ring: #5CBDB6;
+  --jg-color-danger: #F08A80;
+  --jg-color-danger-subtle: #4A140F;
+  --jg-color-on-danger: #4A140F;
+  --jg-color-success: #5FD08F;
+  --jg-color-success-subtle: #0A2E1B;
+  --jg-color-warning: #F5C04E;
+  --jg-color-warning-subtle: #3D2703;
+  --jg-color-overlay: rgba(0, 0, 0, 0.64);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --jg-duration-fast: 0ms; --jg-duration-base: 0ms; }
+}

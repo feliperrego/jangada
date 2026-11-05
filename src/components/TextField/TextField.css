@@ -1,0 +1,45 @@
+.jg-textfield {
+  display: flex;
+  align-items: center;
+  gap: var(--jg-space-2);
+  background: var(--jg-color-surface);
+  border: 1px solid var(--jg-color-border-strong);
+  border-radius: var(--jg-radius-md);
+  padding-inline: var(--jg-space-3);
+  transition: border-color var(--jg-duration-fast) var(--jg-easing-standard);
+}
+
+.jg-textfield:hover:not(.jg-textfield--disabled) { border-color: var(--jg-color-text-muted); }
+.jg-textfield:focus-within { border-color: var(--jg-color-primary); }
+
+.jg-textfield--sm { height: var(--jg-control-height-sm); }
+.jg-textfield--md { height: var(--jg-control-height-md); }
+.jg-textfield--lg { height: var(--jg-control-height-lg); }
+
+.jg-textfield--invalid,
+.jg-textfield--invalid:hover:not(.jg-textfield--disabled) { border-color: var(--jg-color-danger); }
+
+.jg-textfield--disabled { background: var(--jg-color-surface-sunken); cursor: not-allowed; }
+
+.jg-textfield__input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--jg-color-text);
+  font-family: inherit;
+  font-size: var(--jg-font-size-md);
+  font-variant-numeric: tabular-nums;
+  outline: none;
+}
+
+.jg-textfield__input::placeholder { color: var(--jg-color-text-muted); }
+.jg-textfield__input:disabled { color: var(--jg-color-text-disabled); cursor: not-allowed; }
+
+.jg-textfield__affix {
+  flex: none;
+  color: var(--jg-color-text-muted);
+  font-size: var(--jg-font-size-sm);
+  font-weight: var(--jg-font-weight-medium);
+}

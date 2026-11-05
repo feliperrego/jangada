@@ -1,0 +1,84 @@
+.jg-dialog__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: var(--jg-color-overlay);
+  animation: jg-fade-in var(--jg-duration-base) var(--jg-easing-standard);
+}
+
+.jg-dialog {
+  position: fixed;
+  z-index: 41;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--jg-space-3);
+  padding: var(--jg-space-6);
+  background: var(--jg-color-surface);
+  color: var(--jg-color-text);
+  border-radius: var(--jg-radius-lg);
+  box-shadow: var(--jg-shadow-lg);
+  font-family: var(--jg-font-sans);
+  animation: jg-dialog-in var(--jg-duration-base) var(--jg-easing-standard);
+}
+
+.jg-dialog:focus { outline: none; }
+.jg-dialog--sm { max-width: 400px; }
+.jg-dialog--md { max-width: 520px; }
+
+.jg-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--jg-space-4);
+}
+
+.jg-dialog__title {
+  margin: 0;
+  font-size: var(--jg-font-size-xl);
+  font-weight: var(--jg-font-weight-semibold);
+  line-height: var(--jg-line-height-tight);
+}
+
+.jg-dialog__close {
+  all: unset;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin: -0.25rem -0.5rem 0 0;
+  border-radius: var(--jg-radius-sm);
+  color: var(--jg-color-text-muted);
+  cursor: pointer;
+}
+.jg-dialog__close:hover { background: var(--jg-color-surface-sunken); color: var(--jg-color-text); }
+.jg-dialog__close svg { width: 1rem; height: 1rem; }
+
+.jg-dialog__description {
+  margin: 0;
+  font-size: var(--jg-font-size-sm);
+  color: var(--jg-color-text-muted);
+  line-height: var(--jg-line-height-normal);
+}
+
+.jg-dialog__body { font-size: var(--jg-font-size-sm); line-height: var(--jg-line-height-normal); }
+
+.jg-dialog__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--jg-space-2);
+  margin-top: var(--jg-space-2);
+}
+
+@keyframes jg-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes jg-dialog-in {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 8px)); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
