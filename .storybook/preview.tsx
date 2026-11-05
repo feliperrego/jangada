@@ -2,6 +2,10 @@ import type { Preview } from '@storybook/react';
 import '../src/styles/tokens.css';
 import '../src/styles/base.css';
 
+// Páginas só de MDX (como a Introdução) não passam pelo decorador. Sem isto, o tema escuro do
+// sistema operacional entrava sozinho nelas, mesmo com "Claro" escolhido na barra de ferramentas.
+document.documentElement.setAttribute('data-theme', 'light');
+
 const preview: Preview = {
   globalTypes: {
     theme: {

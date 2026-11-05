@@ -1,5 +1,5 @@
-import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
-import { colors, space, radius } from './tokens';
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { colors, space, radius, fontSize } from './tokens';
 
 <Meta title="Introdução" />
 
@@ -25,7 +25,16 @@ Use o botão **Tema** na barra de ferramentas para ver tudo no escuro.
 
 Instrument Sans, com números tabulares nos valores em reais.
 
-<Typeset fontFamily="Instrument Sans, system-ui, sans-serif" fontSizes={[12, 14, 16, 18, 20, 24, 30]} fontWeight={500} sampleText="Saldo disponível: R$ 3.240,18" />
+{/* Escala feita com os próprios tokens, dentro de .jg-root: segue o tema escolhido na barra.
+    O bloco Typeset do Storybook desenha um cartão branco fixo e some com o tema escuro. */}
+<div className="jg-root" style={{ display: 'grid', gap: '0.75rem', padding: '1.5rem', border: '1px solid var(--jg-color-border)', borderRadius: 'var(--jg-radius-md)', fontVariantNumeric: 'tabular-nums', overflowX: 'auto' }}>
+  {Object.entries(fontSize).map(([name, size]) => (
+    <div key={name} style={{ display: 'grid', gridTemplateColumns: '6.5rem 1fr', alignItems: 'baseline', gap: '1rem' }}>
+      <span style={{ fontFamily: 'var(--jg-font-mono)', fontSize: '0.75rem', color: 'var(--jg-color-text-muted)', whiteSpace: 'nowrap' }}>{name} · {parseFloat(size) * 16}px</span>
+      <span style={{ fontFamily: 'var(--jg-font-sans)', fontSize: size, fontWeight: 500, lineHeight: 1.2, color: 'var(--jg-color-text)', whiteSpace: 'nowrap' }}>Saldo disponível: R$ 3.240,18</span>
+    </div>
+  ))}
+</div>
 
 ## Espaços e raios
 
