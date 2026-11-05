@@ -3,6 +3,21 @@
   "version": "0.1.0",
   "description": "Jangada: design system em React com tokens, componentes acessíveis e testes.",
   "license": "MIT",
+  "homepage": "https://jangada.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feliperrego/jangada.git"
+  },
+  "author": "Felipe Rêgo <feliperrego@gmail.com> (https://feliperrego.com)",
+  "keywords": [
+    "design-system",
+    "react",
+    "storybook",
+    "accessibility",
+    "a11y",
+    "tokens",
+    "radix-ui"
+  ],
   "type": "module",
   "packageManager": "pnpm@10.28.0",
   "engines": {

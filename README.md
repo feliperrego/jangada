@@ -4,7 +4,7 @@ Design system em React para produtos financeiros. Os tokens trazem tema claro e 
 
 *React design system for fintech products: light/dark tokens, accessible components, and tests that measure accessibility instead of assuming it.*
 
-**Storybook:** STORYBOOK_URL
+**Storybook:** [jangada.vercel.app](https://jangada.vercel.app)
 
 | | |
 |---|---|
